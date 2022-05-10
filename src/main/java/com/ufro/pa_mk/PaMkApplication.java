@@ -7,7 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class PaMkApplication {
 
     public static void main(String[] args) {
+
         SpringApplication.run(PaMkApplication.class, args);
+
     }
 
 }

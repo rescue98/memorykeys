@@ -4,13 +4,12 @@ import javax.persistence.*;
 
 
 @Entity
-@Table(name = "infodeCuenta")
 public class infoCuenta {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idInfoCuenta", nullable = false)
-    private Long idInfoCuenta;
+    private Long id;
 
     @Column(name = "nombreCuenta", nullable = false, length = 120)
     private String nombreCuenta;
@@ -24,17 +23,25 @@ public class infoCuenta {
     @Column(name = "infoContrasena", nullable = false, length = 255)
     private String infoContrasena;
 
+    @ManyToOne
+    @JoinColumn(name = "idUsuarioCuenta")
+    private usuarioCuenta usuarioCuenta;
+
+    @ManyToOne
+    @JoinColumn(name = "idCarpeta")
+    private carpeta carpeta;
+
 
     public infoCuenta(){
 
     }
 
-    public Long getIdInfoCuenta() {
-        return idInfoCuenta;
+    public Long getId() {
+        return id;
     }
 
-    public void setIdInfoCuenta(Long idInfoCuenta) {
-        this.idInfoCuenta = idInfoCuenta;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getNombreCuenta() {

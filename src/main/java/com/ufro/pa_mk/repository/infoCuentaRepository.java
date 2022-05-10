@@ -4,8 +4,8 @@ import com.ufro.pa_mk.model.infoCuenta;
 import org.springframework.data.repository.CrudRepository;
 
 
-public interface infoCuentaRepository extends CrudRepository<infoCuenta, Integer>{
+public interface infoCuentaRepository extends CrudRepository<infoCuenta, Long>{
 
-    Iterable<infoCuenta> findAllByIdOrderByDateAsc(int idInfoCuenta);
+
 
 }

@@ -5,13 +5,13 @@ import java.util.Date;
 
 
 @Entity
-@Table(name = "usuario")
 public class usuarioCuenta {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idUsuarioCuenta", nullable = false)
-    private Long idUsuarioCuenta;
+    private Long id;
+
 
     @Column(name = "correo", nullable = false, length = 20)
     private String correo;
@@ -26,18 +26,18 @@ public class usuarioCuenta {
     private String apellido;
 
     @Column(name = "telefono", nullable = false, length = 20)
-    private int telefono;
+    private String telefono;
 
     @Column(name = "fechaNacimiento", nullable = false, length = 10)
     private Date fechaNacimiento;
 
 
     public Long getIdUsuarioCuenta() {
-        return idUsuarioCuenta;
+        return id;
     }
 
     public void setIdUsuarioCuenta(Long idUsuarioCuenta) {
-        this.idUsuarioCuenta = idUsuarioCuenta;
+        this.id = idUsuarioCuenta;
     }
 
     public String getCorreo() {
@@ -72,11 +72,11 @@ public class usuarioCuenta {
         this.apellido = apellido;
     }
 
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 

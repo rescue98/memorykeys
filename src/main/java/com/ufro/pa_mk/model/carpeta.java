@@ -4,24 +4,29 @@ package com.ufro.pa_mk.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "carpeta")
 
 public class carpeta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idCarpeta", nullable = false)
-    private Long idCarpeta;
+    private Long id;
+
 
     @Column(name = "nombreCarpeta", nullable = false, length = 120)
     private String nombreCarpeta;
 
+    @ManyToOne
+    @JoinColumn(name = "idUsuarioCuenta")
+    private usuarioCuenta usuarioCuenta;
+
+
 
     public Long getIdCarpeta() {
-        return idCarpeta;
+        return id;
     }
 
     public void setIdCarpeta(Long idCarpeta) {
-        this.idCarpeta = idCarpeta;
+        this.id = idCarpeta;
     }
 
     public String getNombreCarpeta() {

@@ -3,10 +3,10 @@ package com.ufro.pa_mk.repository;
 import com.ufro.pa_mk.model.carpeta;
 import org.springframework.data.repository.CrudRepository;
 
-public interface carpetaRepository extends CrudRepository<carpeta,Integer>{
+public interface carpetaRepository extends CrudRepository<carpeta,Long>{
 
 
-    carpeta findcarpetaBy(String nombreCarpeta);
+    carpeta findCarpetaByNombreCarpeta(String nombreCarpeta);
 
 
 }
