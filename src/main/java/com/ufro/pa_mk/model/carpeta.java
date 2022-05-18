@@ -3,6 +3,7 @@ package com.ufro.pa_mk.model;
 
 import javax.persistence.*;
 
+
 @Entity
 
 public class carpeta {
